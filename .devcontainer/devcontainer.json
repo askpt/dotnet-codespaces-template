@@ -1,6 +1,18 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.203.0/containers/ubuntu
 {
-    "name": "Codespaces .NET Core",
-    "extensions": [
+	"name": "Codespaces .NET Core",
+	"runArgs": ["--init"],
+	"build": {
+		"dockerfile": "Dockerfile",
+	},
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {},
+
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
         "cschleiden.vscode-github-actions",
         "eamodio.gitlens",
         "editorconfig.editorconfig",
@@ -12,16 +24,18 @@
         "ms-vsliveshare.vsliveshare",
         "yzhang.markdown-all-in-one"
     ],
-    "dockerFile": "Dockerfile",
-    "forwardPorts": [
-        5000,
-        5001,
-        7071
-    ],
-    "settings": {
-        "files.exclude": {
-            "**/CODE_OF_CONDUCT.md": true,
-            "**/LICENSE": true
-        }
-    }
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "uname -a",
+
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode",
+	"features": {
+		"git": "latest",
+		"github-cli": "latest",
+		"homebrew": "latest"
+	}
 }
