@@ -18,7 +18,16 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"ms-dotnettools.csharp"
+		"cschleiden.vscode-github-actions",
+        "eamodio.gitlens",
+        "editorconfig.editorconfig",
+        "github.vscode-pull-request-github",
+        "mhutchie.git-graph",
+        "ms-azuretools.vscode-docker",
+        "ms-dotnettools.csharp",
+        "ms-vscode.powershell",
+        "ms-vsliveshare.vsliveshare",
+        "yzhang.markdown-all-in-one"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
@@ -51,5 +60,10 @@
 	// "postCreateCommand": "dotnet restore",
 
 	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode"
+	"remoteUser": "vscode",
+    "features": {
+        "git": "latest",
+        // "github-cli": "latest",
+        // "homebrew": "latest"
+    }
 }
