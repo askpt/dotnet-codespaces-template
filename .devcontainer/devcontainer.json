@@ -7,30 +7,33 @@
     "args": {
       // Update 'VARIANT' to pick a .NET Core version: 3.1, 5.0, 6.0
       // Append -bullseye or -focal to pin to an OS version.
-      "VARIANT": "7.0",
+      "VARIANT": "8.0",
       // Options
       "NODE_VERSION": "lts/*"
     }
   },
 
-  // Set *default* container specific settings.json values on container create.
-  "settings": {},
-
-  // Add the IDs of extensions you want installed when the container is created.
-  "extensions": [
-    "cschleiden.vscode-github-actions",
-    "eamodio.gitlens",
-    "editorconfig.editorconfig",
-    "github.vscode-pull-request-github",
-    "mhutchie.git-graph",
-    "ms-azuretools.vscode-docker",
-    "ms-dotnettools.csharp",
-    "ms-vscode.powershell",
-    "ms-vsliveshare.vsliveshare",
-    "yzhang.markdown-all-in-one",
-    "ionide.ionide-fsharp",
-    "paolodellepiane.fantomas-fmt"
-  ],
+  "customizations": {
+      "vscode": {
+        // Set *default* container specific settings.json values on container create.
+        "settings": {},
+        // Add the IDs of extensions you want installed when the container is created.
+        "extensions": [
+          "cschleiden.vscode-github-actions",
+          "eamodio.gitlens",
+          "editorconfig.editorconfig",
+          "github.vscode-pull-request-github",
+          "mhutchie.git-graph",
+          "ms-azuretools.vscode-docker",
+          "ms-dotnettools.csharp",
+          "ms-vscode.powershell",
+          "ms-vsliveshare.vsliveshare",
+          "yzhang.markdown-all-in-one",
+          "ionide.ionide-fsharp",
+          "paolodellepiane.fantomas-fmt"
+        ]
+    }
+  },
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [5000, 5001],
